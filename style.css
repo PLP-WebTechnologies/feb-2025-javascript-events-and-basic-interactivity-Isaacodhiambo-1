@@ -1,0 +1,98 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== CSS Variables for Light Mode ===== */
+:root {
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --accent-color: #ff6347;
+  --hover-color: #ff988c;
+  --button-bg: #ff6347;
+  --button-color: #fff;
+}
+
+/* ===== CSS Variables for Dark Mode ===== */
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #fff;
+  --accent-color: #ff6347;
+  --hover-color: #ff988c;
+  --button-bg: #ff6347;
+  --button-color: #fff;
+}
+
+/* ===== Base Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Header ===== */
+header h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+}
+
+/* ===== Hover Text Animation ===== */
+#hover-text:hover {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  transition: font-size 0.2s ease, color 0.2s ease;
+}
+
+/* ===== Gallery Image Hover ===== */
+.gallery-img {
+  width: 100px;
+  height: 100px;
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery-img:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Accordion Content ===== */
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  background-color: var(--hover-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+/* ===== Error Messages ===== */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
